@@ -31,7 +31,7 @@ export default {
     // This method is invoked only once whenever the command is registered
     init: (client: Client) => {
         // TODO: Load the status from the database
-        const status = "under development" // Would come from the database
+        const status = "Running on Raspberry Pi" // Would come from the database
         setStatus(client, status)
     },
 
