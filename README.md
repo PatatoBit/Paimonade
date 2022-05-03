@@ -1,4 +1,4 @@
-# Paimonade
+# Paimonade 🍹
 
 A General use Genshin Impact Discord Bot built with WOK Discord Command Handler thing
 
