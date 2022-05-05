@@ -12,7 +12,45 @@ const client = new DiscordJS.Client({
   ],
 })
 
+// Sync commands
+const synchronizeSlashCommands = require('discord-sync-commands');
+synchronizeSlashCommands(client, [
+  {
+    name: 'fifty',
+    description: 'Take your chance to 50/50'
+  },
+  {
+    name: 'help',
+    description: 'List all the available commands',
+  },
+  {
+    name: 'ping',
+    description: 'Replies with pong',
+  },
+  {
+    name: 'resin',
+    description: 'Calculate time until your resin is full'
+  },
+  {
+    name: 'server',
+    description: 'Tells Genshin Impact Server Status'
+  },
+  {
+    name: 'status',
+    description: 'Updates the status for the bot'
+  }
+], {
+  debug: true,
+});
+
+
+
+
+
+
+
 client.on('ready', () => {
+
   new WOKCommands(client, {
     // The name of the local folder for your command files
     commandsDir: path.join(__dirname, 'commands'),
