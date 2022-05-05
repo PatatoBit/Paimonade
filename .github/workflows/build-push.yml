@@ -1,15 +1,15 @@
 name: Docker Build/Publish Image 
 on:  
   push:    
-    branches: [ main ]  
+    branches: [ master ]  
 jobs:   
   build:    
     runs-on: ubuntu-18.04    
     env:      
       DOCKER_REGISTRY: kemansel.azurecr.io      
       DOCKER_IMAGE: kmansel/express-me      
-      DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}  
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
       DOCKER_TARGET_PLATFORM: linux/arm/v7                 
     steps:    
     - name: Checkout the code       
