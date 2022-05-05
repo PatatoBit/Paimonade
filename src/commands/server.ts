@@ -24,8 +24,8 @@ export default {
     callback: ({ message, text }) => {
         // GMT + 7 - Current Local Time
         const now = new Date();
-        // const local = new Date(now.getTime() + 7 * 60 * 60 * 1000);
-        const local = new Date();
+        const local = new Date(now.getTime() + 7 * 60 * 60 * 1000);
+        // const local = new Date();
 
         // Server reset 4AM
         // 4AM - server hour & server min
