@@ -68,8 +68,8 @@ export default {
 
         const embed = new MessageEmbed()
             .setColor("#05d86e")
-            .setAuthor("Server Status")
-            .setFooter("Local Pi Time: " + toTime(local))
+            .setAuthor({ name: "Server Status" })
+            .setFooter({ text: "Local Pi Time: " + toTime(local) })
             .setDescription("Genshin Impact Server Time")
             .addFields([
                 {
@@ -90,6 +90,7 @@ export default {
                 },
 
             ])
+
         return embed
     }
 

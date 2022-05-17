@@ -44,11 +44,6 @@ synchronizeSlashCommands(client, [
 });
 
 
-
-
-
-
-
 client.on('ready', () => {
 
   new WOKCommands(client, {
